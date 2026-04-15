@@ -1,0 +1,30 @@
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]serSettings/
+
+# Memory captures and crashes
+/[Mm]emoryCaptures/
+/[Cc]rashlogs/
+
+# Auto-generated Visual Studio / Rider / IDE files
+[Vv]isual[Ss]tudio.csproj
+*.csproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svclog
+*.pdb
+*.opendb
+*.VC.db
+
+# OS-specific files
+.DS_Store
+Thumbs.db
