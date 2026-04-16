@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
@@ -14,6 +15,7 @@ public class PlayerController : MonoBehaviour
     public GameObject powerupIndicator;
     public GameObject projectilePrefub;
     public ParticleSystem explosionParticle;
+    public InputAction moveAction;
 
     private AudioSource audioSource;
     public AudioClip deathSound;
@@ -21,6 +23,7 @@ public class PlayerController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        moveAction.Enable();
         rigidbodyPl = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
     }
@@ -46,10 +49,8 @@ public class PlayerController : MonoBehaviour
 
     void MovePlayer()
     {
-        var verticalInput = Input.GetAxis("Vertical");
-        var horizontalInput = Input.GetAxis("Horizontal");
-
-        transform.Translate(verticalInput * Time.deltaTime * speed * Vector3.forward + horizontalInput * Time.deltaTime * speed * Vector3.right);
+        var input = moveAction.ReadValue<Vector2>();
+        transform.Translate(Time.deltaTime * speed * new Vector3(input.x, 0, input.y));
     }
 
     void ConstrainPlayerPos()

@@ -1101,6 +1101,55 @@ MonoBehaviour:
   powerupIndicator: {fileID: 1887444421}
   projectilePrefub: {fileID: 4255120690068707022, guid: a0a5e03eb7c7d92dc90ac19be41cfcf2, type: 3}
   explosionParticle: {fileID: 4758139293545943008, guid: c7ad2532a6eeb40b59033c75e71fa054, type: 3}
+  moveAction:
+    m_Name: Move
+    m_Type: 0
+    m_ExpectedControlType: Vector2
+    m_Id: d9252d12-c9da-4371-a02a-02433ad7d300
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 2D Vector
+      m_Id: 96b69d42-a3f9-4367-825d-6a6b16f069fe
+      m_Path: 2DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 4
+    - m_Name: up
+      m_Id: fdd2c434-6e3b-4743-92c5-049be9898b98
+      m_Path: <Keyboard>/w
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 8
+    - m_Name: down
+      m_Id: 22ea2444-d072-4b1c-b1fc-f3422e3dd7f7
+      m_Path: <Keyboard>/s
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 8
+    - m_Name: left
+      m_Id: d3d72395-eac9-4676-886d-ff0e5120eea3
+      m_Path: <Keyboard>/a
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 8
+    - m_Name: right
+      m_Id: 144663ae-8a97-441b-bf88-3ac40b451ee3
+      m_Path: <Keyboard>/d
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 8
+    m_Flags: 0
   deathSound: {fileID: 8300000, guid: 913d6445ee8cc4152a9c18da590ee203, type: 3}
   fireSound: {fileID: 8300000, guid: 113ee460fadc340e4957a7404a9fbb27, type: 3}
 --- !u!54 &664967867
