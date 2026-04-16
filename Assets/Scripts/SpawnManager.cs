@@ -26,7 +26,7 @@ public class SpawnManager : MonoBehaviour
 
     void SpawnEnemyWave()
     {
-        if (FindObjectsByType<Enemy>().Length == 0 && gameManager.IsGameActive() && waveNum < 5)
+        if (FindObjectsByType<Enemy>(FindObjectsSortMode.None).Length == 0 && gameManager.IsGameActive() && waveNum < 5)
         {
             waveNum++;
             switch (waveNum)
@@ -55,7 +55,7 @@ public class SpawnManager : MonoBehaviour
                     break;
             }
         }
-        else if (FindObjectsByType<Enemy>().Length == 0 && waveNum == 5)
+        else if (FindObjectsByType<Enemy>(FindObjectsSortMode.None).Length == 0 && waveNum == 5)
         {
             gameManager.Victory();
         }
