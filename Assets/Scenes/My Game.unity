@@ -1097,7 +1097,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   lives: 5
-  speed: 0.25
+  speed: 10
   powerupIndicator: {fileID: 1887444421}
   projectilePrefub: {fileID: 4255120690068707022, guid: a0a5e03eb7c7d92dc90ac19be41cfcf2, type: 3}
   explosionParticle: {fileID: 4758139293545943008, guid: c7ad2532a6eeb40b59033c75e71fa054, type: 3}

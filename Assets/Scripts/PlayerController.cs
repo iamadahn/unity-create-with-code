@@ -49,8 +49,7 @@ public class PlayerController : MonoBehaviour
         var verticalInput = Input.GetAxis("Vertical");
         var horizontalInput = Input.GetAxis("Horizontal");
 
-        transform.Translate(verticalInput * speed * Vector3.forward);
-        transform.Translate(horizontalInput * speed * Vector3.right);
+        transform.Translate(verticalInput * Time.deltaTime * speed * Vector3.forward + horizontalInput * Time.deltaTime * speed * Vector3.right);
     }
 
     void ConstrainPlayerPos()
